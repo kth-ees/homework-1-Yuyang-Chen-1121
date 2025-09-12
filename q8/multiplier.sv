@@ -1,8 +1,8 @@
 `include "full_adder.sv"
 `include "half_adder.sv"
-module multiplier #(parameter N) (
-  input  logic [N-1:0]a,b,
-  output logic [2*N-1:0] product
+module multiplier #(parameter N)(
+    input [N-1:0] a,b,
+    output [2*N-1:0] product
 );
 logic [N-1:0]     inter_unit         [0:N-1];   
 logic [2*N-1:0]   shifted_inter_unit [0:N-1];   
